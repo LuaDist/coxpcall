@@ -4,11 +4,10 @@
 # For details see the COPYRIGHT file distributed with LuaDist.
 # Please note that the package source code is licensed under its own license.
 
-PROJECT(coxpcall NONE)
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-INCLUDE(dist.cmake)
+project ( coxpcall NONE )
+cmake_minimum_required ( VERSION 2.6 )
+include ( dist.cmake )
 
-# Install all files and documentation
-INSTALL (FILES src/coxpcall.lua DESTINATION ${INSTALL_LMOD})
-INSTALL (FILES README DESTINATION ${INSTALL_DATA})
-INSTALL (DIRECTORY doc/ DESTINATION ${INSTALL_DOC})
+install_lua_module ( coxpcall src/coxpcall.lua )
+install_data ( README )
+install_doc ( doc/ )
